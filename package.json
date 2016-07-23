@@ -1,0 +1,27 @@
+{
+  "name": "mjml-loader",
+  "version": "1.0.0-beta.0",
+  "description": "MJML loader for webpack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ramasilveyra/mjml-loader.git"
+  },
+  "keywords": [
+    "mjml",
+    "webpack",
+    "loader"
+  ],
+  "author": "Ramiro Silveyra d'Avila",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ramasilveyra/mjml-loader/issues"
+  },
+  "homepage": "https://github.com/ramasilveyra/mjml-loader#readme",
+  "dependencies": {
+    "mjml": "^2.3.0"
+  }
+}
