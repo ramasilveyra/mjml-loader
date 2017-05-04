@@ -22,6 +22,6 @@
   },
   "homepage": "https://github.com/ramasilveyra/mjml-loader#readme",
   "dependencies": {
-    "mjml": "^2.3.0"
+    "mjml": "^3.3.2"
   }
 }
