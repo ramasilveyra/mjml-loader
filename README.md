@@ -13,7 +13,7 @@ With this configuration:
 {
     module: {
       loaders: [
-        { test: /\.mjml$/, loader: 'mjml' }
+        { test: /\.mjml$/, loader: 'mjml-loader' }
       ]
     }
 }
@@ -35,7 +35,7 @@ With this configuration:
 `index.js`
 ```javascript
 const template = require('./template.mjml');
-console.log(template());
+console.log(template);
 ```
 `console.log` output:
 ```html
