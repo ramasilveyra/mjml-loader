@@ -16,5 +16,5 @@ module.exports = function(content) {
     throw new Error(result.error);
   }
 
-  return `module.exports = ${JSON.stringify(result)};`;
+  return `module.exports = ${JSON.stringify(result.html)};`;
 };
