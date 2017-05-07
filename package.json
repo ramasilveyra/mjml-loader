@@ -1,6 +1,6 @@
 {
   "name": "mjml-loader",
-  "version": "1.0.0-beta.0",
+  "version": "1.0.0-beta.1",
   "description": "MJML loader for webpack",
   "main": "index.js",
   "scripts": {
