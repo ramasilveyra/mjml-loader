@@ -12,7 +12,7 @@ With this configuration:
 ```javascript
 {
     module: {
-      loaders: [
+      rules: [
         { test: /\.mjml$/, loader: 'mjml-loader' }
       ]
     }
