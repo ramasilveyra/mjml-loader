@@ -1,28 +1,84 @@
 {
   "name": "mjml-loader",
-  "version": "1.0.0-beta.1",
+  "version": "1.0.0",
   "description": "MJML loader for webpack",
-  "main": "index.js",
+  "main": "build/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel src -d build -s",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
+    "lint": "eslint .",
+    "precommit": "lint-staged",
+    "prepublish": "yarn run build",
+    "test-ci-partial": "yarn run test-coverage --silent",
+    "test-ci": "yarn run lint --silent && yarn run test-ci-partial --silent && codecov",
+    "test-coverage": "yarn run jest --silent -- --coverage",
+    "test": "jest",
+    "example": "webpack --config example/webpack.config.js && node example/bundle.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ramasilveyra/mjml-loader.git"
-  },
+  "repository": "git+https://github.com/ramasilveyra/mjml-loader.git",
   "keywords": [
     "mjml",
     "webpack",
     "loader"
   ],
-  "author": "Ramiro Silveyra d'Avila",
+  "author": {
+    "name": "Ramiro Silveyra d'Avila",
+    "twitter": "ramasilveyra"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ramasilveyra/mjml-loader/issues"
   },
   "homepage": "https://github.com/ramasilveyra/mjml-loader#readme",
   "dependencies": {
-    "colors": "^1.1.2",
     "mjml": "^3.3.2"
+  },
+  "peerDependencies": {
+    "webpack": "^2.0.0 || >= 3.0.0-rc.0 || ^3.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^7.2.3",
+    "babel-jest": "^21.0.2",
+    "babel-plugin-dynamic-import-node": "^1.0.2",
+    "babel-preset-env": "^1.6.0",
+    "codecov": "^2.3.0",
+    "conventional-changelog-cli": "^1.3.3",
+    "del": "^3.0.0",
+    "eslint": "^4.6.1",
+    "eslint-config-auth0-base": "^13.1.0",
+    "eslint-plugin-import": "^2.7.0",
+    "husky": "^0.14.3",
+    "jest": "^21.0.2",
+    "lint-staged": "^4.1.3",
+    "prettier": "^1.6.1",
+    "webpack": "^3.5.6"
+  },
+  "engines": {
+    "node": ">=6.5.0"
+  },
+  "devEngines": {
+    "node": ">=6.5.0",
+    "yarn": ">=1.0.0"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/*.js"
+    ],
+    "collectCoverage": true,
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 80,
+        "lines": 80,
+        "statements": 80
+      }
+    },
+    "testEnvironment": "node"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --single-quote --print-width 100 --write"
+    ]
   }
 }

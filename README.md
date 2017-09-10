@@ -1,23 +1,73 @@
-# MJML loader for webpack
+<br />
+<div align="center">
+  <a href="https://www.npmjs.com/package/mjml-loader">
+    <img src="https://img.shields.io/npm/v/mjml-loader.svg?maxAge=86400" alt="Last npm Registry Version">
+  </a>
+  <a href="https://travis-ci.org/ramasilveyra/mjml-loader?branch=master">
+    <img src="https://travis-ci.org/ramasilveyra/mjml-loader.svg?branch=master" alt="Build Status">
+  </a>
+  <a href="https://codecov.io/github/ramasilveyra/mjml-loader?branch=master">
+    <img src="https://img.shields.io/codecov/c/github/ramasilveyra/mjml-loader.svg?branch=master" alt="Code coverage">
+  </a>
+</div>
 
-Converts MJML files to HTML and exports them as string.
+<h1 align="center">MJML loader for webpack</h1>
 
-## Usage
+<p align="center">Converts MJML files to HTML and exports them as string.</p>
 
-[Documentation: Using loaders](http://webpack.github.io/docs/using-loaders.html)
+<h2 align="center">Table of Contents</h2>
 
-## Examples
+- [Install](#install)
+- [Usage](#usage)
+- [Examples](#examples)
+- [Contribute](#contribute)
+- [License](#license)
+
+<h2 align="center">Install</h2>
+
+**Node.js v6.5 or newer** is required.
+
+**webpack 2 or newer** is required.
+
+Via the yarn client:
+
+```bash
+$ yarn add --dev mjml-loader webpack
+```
+
+Via the npm client:
+
+```bash
+$ npm install --save-dev mjml-loader webpack
+```
+
+<h2 align="center">Usage</h2>
+
+
+[Look into the official webpack loaders usage documentation](https://webpack.js.org/concepts/loaders/#using-loaders).
+
+At this moment this loader has no options.
+
+<h2 align="center">Examples</h2>
+
+### Inline the MJML result (HTML) into bundle
 
 With this configuration:
+
 ```javascript
 {
-    module: {
-      rules: [
-        { test: /\.mjml$/, loader: 'mjml-loader' }
-      ]
-    }
+  // ...
+  module: {
+    rules: [
+      { test: /\.mjml$/, loader: 'mjml-loader' }
+    ]
+  }
+  // ...
 }
 ```
+
+With this MJML file:
+
 `template.mjml`
 ```xml
  <mjml>
@@ -32,12 +82,17 @@ With this configuration:
   </mj-body>
 </mjml>
 ```
+
+This entry point:
+
 `index.js`
 ```javascript
-const template = require('./template.mjml');
+import template from './template.mjml';
 console.log(template);
 ```
-`console.log` output:
+
+The console output will be:
+
 ```html
 <!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -91,6 +146,12 @@ console.log(template);
 </html>
 ```
 
-## License
+<h2 align="center">Contribute</h2>
 
-MIT (http://www.opensource.org/licenses/mit-license.php)
+Feel free to dive in! [Open an issue](https://github.com/ramasilveyra/mjml-loader/issues/new) or submit PRs.
+
+mjml-loader follows the [Contributor Covenant](http://contributor-covenant.org/version/1/3/0/) Code of Conduct.
+
+<h2 align="center">License</h2>
+
+[MIT © Ramiro Silveyra d'Avila](LICENSE.md)
