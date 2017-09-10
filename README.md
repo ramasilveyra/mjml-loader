@@ -50,6 +50,10 @@ At this moment this loader has no options.
 
 <h2 align="center">Examples</h2>
 
+### Compile MJML file to HTML file
+
+For transforming a MJML file to a HTML file is better to use [`mjml cli`](https://www.npmjs.com/package/mjml-cli) or [`gulp-mjml`](https://www.npmjs.com/package/gulp-mjml).
+
 ### Inline the MJML result (HTML) into bundle
 
 With this configuration:
