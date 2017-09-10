@@ -1,3 +1,6 @@
+build
+test/fixtures/bundle.js
+
 # Logs
 logs
 *.log

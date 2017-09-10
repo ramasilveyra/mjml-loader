@@ -1,0 +1,6 @@
+.git/*
+build/*
+node_modules/*
+coverage/*
+test/fixtures/bundle.js
+example/bundle.js

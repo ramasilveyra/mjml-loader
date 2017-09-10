@@ -1,0 +1,12 @@
+{
+  "extends": "auth0-base/prettier",
+  "parser": "babel-eslint",
+  "overrides": [
+    {
+      "files": ["test/*.js"],
+      "env": {
+        "jest": true
+      }
+    }
+  ]
+}
