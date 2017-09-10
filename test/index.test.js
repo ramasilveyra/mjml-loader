@@ -27,7 +27,7 @@ describe('while using mjml-loader', () => {
 
     const result = mjmlLoader.bind(context, invalidMJML);
 
-    expect(result).toThrowErrorMatchingSnapshot();
+    expect(result).toThrowError(/\[mjml-loader\] ERROR in /);
     expect(context.cacheable).toHaveBeenCalled();
   });
 });
