@@ -1,3 +1,13 @@
+<a name="1.0.1"></a>
+## [1.0.1](https://github.com/ramasilveyra/mjml-loader/compare/v1.0.0...v1.0.1) (2017-10-03)
+
+
+### Bug Fixes
+
+* **package:** add build files to pkg ([12edd35](https://github.com/ramasilveyra/mjml-loader/commit/12edd35)), closes [#7](https://github.com/ramasilveyra/mjml-loader/issues/7)
+
+
+
 <a name="1.0.0"></a>
 # [1.0.0](https://github.com/ramasilveyra/mjml-loader/compare/v1.0.0-beta.1...v1.0.0) (2017-09-10)
 
