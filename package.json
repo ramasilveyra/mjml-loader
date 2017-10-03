@@ -80,5 +80,8 @@
     "*.js": [
       "prettier --single-quote --print-width 100 --write"
     ]
-  }
+  },
+  "files": [
+    "build"
+  ]
 }
