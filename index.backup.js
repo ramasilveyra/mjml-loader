@@ -1,9 +1,16 @@
-import mjml2html from 'mjml';
+'use strict';
 
-export default function mjmlLoader(content) {
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = mjmlLoader;
+
+var _mjml = require('mjml').default;
+
+function mjmlLoader(content) {
   this.cacheable();
 
-  const result = mjml2html(content);
+  const result = _mjml(content);
 
   if (result.errors.length) {
     const errorMsg = `[mjml-loader] ERROR in ${this.resourcePath}:
@@ -17,3 +24,4 @@ export default function mjmlLoader(content) {
 
   return `export default ${JSON.stringify(result.html)};`;
 }
+//# sourceMappingURL=index.js.map
