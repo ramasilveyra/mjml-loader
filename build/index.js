@@ -5,12 +5,16 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = mjmlLoader;
 
-var _mjml = require('mjml').default;
+var _mjml = require('mjml');
+
+var _mjml2 = _interopRequireDefault(_mjml);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function mjmlLoader(content) {
   this.cacheable();
 
-  const result = _mjml(content);
+  const result = (0, _mjml2.default)(content);
 
   if (result.errors.length) {
     const errorMsg = `[mjml-loader] ERROR in ${this.resourcePath}:
