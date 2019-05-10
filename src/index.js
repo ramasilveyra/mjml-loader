@@ -1,4 +1,4 @@
-import { mjml2html } from 'mjml';
+import mjml2html from 'mjml';
 
 export default function mjmlLoader(content) {
   this.cacheable();
